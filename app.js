@@ -15,7 +15,7 @@
 
             console.log(words.length);
             for (let i = 0; i < words.length; i++) {
-                if (words[i] == ' ' || words[i] == null) {
+                if (words[i] == '' || words[i] == null) {
                     return $scope.message = 'Empty item detected!'; 
                 } else if (words.length <= 2) {
                     return $scope.message = 'Enjoy!';

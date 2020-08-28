@@ -6,27 +6,26 @@
     <link rel="stylesheet" href="style.css">
   </head>
 <body>
-  
-    <h1>Lunch Checker</h1>
-        <div id="container" ng-controller="LunchCheckController">
-            <h2>Your List</h2>
-                <div>
-                    <p>Empty items aren't aveilable!</p>
-                    <input type="text" ng-model="item">
-                </div>
-                <br>
+    <div  id="container">
+        <h1>Lunch Checker</h1>
+            <div ng-controller="LunchCheckController">
+                <h2>Your List</h2>
+                    <div>
+                        <h3>Empty items aren't aveilable!</h3>
+                        <input type="text" ng-model="item">
+                    </div>
+                    <br>
+                    
+
+                    <div>
+                        <button ng-click="check()">Check If Too Much</button>
+                    </div>
+                    <br>
+                    <h3>{{item}}</h3>
+                    <h3>{{message}}</h3>
                 
-
-                <div>
-                    <button ng-click="check()">Check If Too Much</button>
-                </div>
-                <br>
-                <p>{{item}}</p>
-                <p>{{message}}</p>
-            
-        </div>
-
-         
+            </div>
+    </div>
 <script src="angular.min.js"></script>
 <script src="app.js"></script>
 </body>
