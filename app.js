@@ -14,13 +14,14 @@
             const words = $scope.item.split(' ');
 
             console.log(words.length);
-            
-            if ($scope.item == null || $scope.item == '') {
-                return $scope.message = 'Empty item detected!';
-            } else if (words.length <= 2) {
-                return $scope.message = 'Enjoy!';
-            } else if (words.length > 3) {
-                return $scope.message = 'Too Much!';
+            for (let i = 0; i < words.length; i++) {
+                if (words[i] == ' ' || words[i] == null) {
+                    return $scope.message = 'Empty item detected!'; 
+                } else if (words.length <= 2) {
+                    return $scope.message = 'Enjoy!';
+                } else if (words.length > 3) {
+                    return $scope.message = 'Too Much!';
+                }
             }
         }
     }
